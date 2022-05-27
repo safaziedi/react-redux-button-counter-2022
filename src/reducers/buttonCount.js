@@ -1,8 +1,12 @@
 const buttonCount = (count = 0, action) => {
-	if (action.type === 'INCREMENT_COUNTER') {
-		return count + action.payload;
+	switch(action.type) {
+        case 'INCREMENT_COUNTER':
+            return count + action.payload;
+		case 'DECREMENT_COUNTER':
+			return count - action.payload;
+		default:
+			return count;
 	}
-	return count;
 };
 
 export default buttonCount;
