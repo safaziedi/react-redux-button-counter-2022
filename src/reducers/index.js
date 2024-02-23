@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import buttonCount from './buttonCount';
+import CountReducer from './CountReducer';
 
 const rootReducer = combineReducers({
-    buttonCount
+    CountReducer
 });
 
 export default rootReducer;
