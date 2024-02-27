@@ -1,11 +1,18 @@
-const CountReducer = (count = 0, action) => {
+import * as ACTIONS_TYPES from '../actions/actions_types'
+
+const initialState ={
+	count:1,
+}
+
+const CountReducer = (state = initialState.count, action) => {
+	//reducer = update selon action type
 	switch(action.type) {
-        case 'INCREMENT_COUNTER':
-            return count + action.payload;
-		case 'DECREMENT_COUNTER':
-				return count - action.payload;
+        case ACTIONS_TYPES.INCREMENT_COUNTER:
+            return state + action.payload;
+		case ACTIONS_TYPES.DECREMENT_COUNTER:
+				return state - action.payload;
 		default:
-			return count;
+			return state;
 	}
 };
 

@@ -1,7 +1,8 @@
 import {useSelector, useDispatch} from 'react-redux';
-import { decrement, increment } from '../store/actions/index.js'
+import { decrement, increment } from '../store/actions/actions.js'
 
 export default function Button() {
+  //useSelector = determine whether the component needs to be re-rendered.
     const count = useSelector(state => state.CountReducer);
 
     const dispatch = useDispatch()
