@@ -1,6 +1,8 @@
+import { DECREMENT_COUNTER, INCREMENT_COUNTER } from "./actions_types";
+
 export const increment = amount => {
 	return {
-		type: 'INCREMENT_COUNTER',
+		type: INCREMENT_COUNTER,
 		payload: amount
 	};
 };
@@ -8,7 +10,7 @@ export const increment = amount => {
 
 export const decrement = amount => {
 	return {
-		type: 'DECREMENT_COUNTER',
+		type: DECREMENT_COUNTER,
 		payload: amount
 	};
 };
